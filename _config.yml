@@ -1,0 +1,21 @@
+title: Microbio AI
+description: Advanced Bacterial Classification System
+url: "https://tejaskanneboina415.github.io"
+baseurl: "/BactiDetect2"
+
+# Build settings
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-relative-links
+
+# Exclude from processing
+exclude:
+  - README.md
+  - requirements.txt
+  - *.py
+  - *.h5
+  - *.json
+  - data/
+  - venv/
+  - venv*/
+  - __pycache__/ 
