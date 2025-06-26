@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}AI Classifier Tool{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1>Microbiology AI Classifier Tool</h1>
+    <p class="mb-1">Upload one or more images of bacterial colonies to classify them.</p>
+</div>
+
+<form action="{{ url_for('classifier_tool') }}" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="file">Upload Image(s):</label>
+        <input type="file" name="file" id="file" accept="image/*" required multiple>
+        <small>You can select multiple images by holding Ctrl (Windows) or Cmd (Mac) while selecting.</small>
+    </div>
+    <div class="text-center">
+        <input type="submit" value="Classify Colonies" class="btn-primary">
+    </div>
+</form>
+
+{% if predictions and predictions|length > 0 %}
+    <h2>Results:</h2>
+    {% for p in predictions %}
+    <div class="prediction-result">
+        {% if p.error %}
+            <h3>Error processing {{ p.filename }}:</h3>
+            <p>{{ p.error }}</p>
+        {% else %}
+            <h3>Prediction for {{ p.filename }}:</h3>
+            <p>{{ p.prediction_text }}</p>
+        {% endif %}
+    </div>
+    {% endfor %}
+{% elif request.method == 'POST' %}
+    <div class="prediction-result">
+        <p>No files were uploaded or processed. Please select one or more image files.</p>
+    </div>
+{% endif %}
+{% endblock %} 

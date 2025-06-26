@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Dataset Sources</h2>
+    <p>This project uses publicly available, peer-reviewed datasets for training and evaluation. Below are the main sources:</p>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">DIBaS: Digital Images of Bacteria Species</h5>
+            <p class="card-text">
+                <strong>Description:</strong> 33 bacteria species, 20 images per species. Stained using Gram's method, imaged at 100x oil-immersion.<br>
+                <strong>Source:</strong> Chair of Microbiology, Jagiellonian University, Krakow, Poland.<br>
+                <strong>Access:</strong> <a href="http://misztal.edu.pl/software/databases/dibas/" target="_blank">DIBaS Dataset Download</a><br>
+                <strong>Citation:</strong> Zieliński B, Plichta A, Misztal K, Spurek P, Brzychczy-Włoch M, Ochońska D. Deep learning approach to bacterial colony classification. PLOS ONE, 12(9), 1-14, 2017. <a href="https://doi.org/10.1371/journal.pone.0184554" target="_blank">[Read Paper]</a><br>
+                <strong>License:</strong> Open access, attribution required.
+            </p>
+        </div>
+    </div>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Clinical Bacterial Dataset for Deep Learning in Microbiological Rapid On-Site Evaluation</h5>
+            <p class="card-text">
+                <strong>Description:</strong> 1,705 clinical Gram-stained images from respiratory specimens, with 4,833 cocci and 6,991 bacilli annotated.<br>
+                <strong>Source:</strong> Chinese PLA General Hospital, Beijing, China.<br>
+                <strong>Access:</strong> <a href="https://doi.org/10.5281/zenodo.10526360" target="_blank">Zenodo Dataset</a><br>
+                <strong>Citation:</strong> Wang, X., Shi, Y., Guo, S. et al. A Clinical Bacterial Dataset for Deep Learning in Microbiological Rapid On-Site Evaluation. Sci Data 11, 608 (2024). <a href="https://doi.org/10.1038/s41597-024-03370-5" target="_blank">[Read Paper]</a><br>
+                <strong>License:</strong> Creative Commons Attribution 4.0 International (CC BY 4.0)
+            </p>
+        </div>
+    </div>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Augmented Training Dataset</h5>
+            <p class="card-text">
+                <strong>Description:</strong> Enhanced dataset created through data augmentation techniques to improve model accuracy. Expanded from 679 to 1,850 images across 32 bacterial species.<br>
+                <strong>Source:</strong> Generated from original datasets using advanced augmentation techniques.<br>
+                <strong>Augmentation Techniques:</strong> Rotation (±30°), brightness/contrast adjustment, noise addition, blur/sharpen, horizontal/vertical flips, and combinations thereof.<br>
+                <strong>Target:</strong> 50 samples per class for balanced training.<br>
+                <strong>Purpose:</strong> Address class imbalance and limited training data to improve model generalization.<br>
+                <strong>Status:</strong> Generated and available for training in <code>data/augmented/</code> directory.
+            </p>
+        </div>
+    </div>
+    <div class="alert alert-info">
+        <strong>Note:</strong> All datasets are used in accordance with their respective licenses. If you use this project or its data, please cite the original sources.
+    </div>
+</div>
+{% endblock %} 

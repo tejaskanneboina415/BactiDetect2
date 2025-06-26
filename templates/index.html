@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome to BactiDetect{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="glass-card" style="text-align:center; margin-top:2rem;">
+        <h1 style="font-size:2.8rem; font-weight:700; margin-bottom:1rem; letter-spacing:-1px;">AI-Powered Bacterial Detection</h1>
+        <p style="font-size:1.3rem; max-width:700px; margin:0 auto 2rem auto; color:#333;">Safeguarding human and environmental health through intelligent analysis of microbial environments.</p>
+        <a href="{{ url_for('classifier_tool') }}" class="btn-primary">Try the AI Classifier Tool</a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="glass-card">
+        <h2 style="font-size:2rem; font-weight:600; margin-bottom:1rem;">Why This Matters</h2>
+        <p style="font-size:1.1rem;">Harmful bacteria pose significant threats across various sectors. Early and accurate detection is crucial for preventing contamination, protecting public health, and preserving our delicate ecosystems. Our AI model offers a rapid, accessible solution.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="glass-card">
+        <h2 style="font-size:2rem; font-weight:600; margin-bottom:1.5rem;">Our Approach to Helping Microbiology</h2>
+        <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
+            <div class="feature-card glass-card" style="flex:1 1 320px; min-width:260px; max-width:48%;">
+                <h3>AI-Powered Analysis</h3>
+                <p>Leveraging advanced machine learning to provide rapid, accurate bacterial classification with minimal human error.</p>
+            </div>
+            <div class="feature-card glass-card" style="flex:1 1 320px; min-width:260px; max-width:48%;">
+                <h3>Real-Time Results</h3>
+                <p>Get instant classification results, enabling quick decision-making in critical situations.</p>
+            </div>
+            <div class="feature-card glass-card" style="flex:1 1 320px; min-width:260px; max-width:48%;">
+                <h3>Accessible Technology</h3>
+                <p>Making sophisticated bacterial analysis available to researchers and professionals through an intuitive web interface.</p>
+            </div>
+            <div class="feature-card glass-card" style="flex:1 1 320px; min-width:260px; max-width:48%;">
+                <h3>Continuous Learning</h3>
+                <p>Our model continuously improves through feedback and new data, ensuring increasingly accurate results.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="glass-card">
+        <h2 style="font-size:2rem; font-weight:600; margin-bottom:1rem;">How It Works</h2>
+        <p style="font-size:1.1rem;">Upload an image of a bacterial colony, and our AI will analyze and classify it in seconds. The process is simple, fast, and designed for both experts and newcomers in microbiology.</p>
+    </div>
+</section>
+{% endblock %} 

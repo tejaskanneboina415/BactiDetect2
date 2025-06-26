@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}How To Use{% endblock %}
+
+{% block content %}
+<h2>How to Use This Tool</h2>
+<div class="howto-content">
+    <p>Follow these simple steps to classify your bacterial colony images:</p>
+    <ul class="howto-list">
+        <li>Navigate to the <a href="{{ url_for('home') }}">Home</a> page.</li>
+        <li>Click on the "Choose File" or the designated upload area.</li>
+        <li>Select a clear, well-lit image of a bacterial colony from your device.</li>
+        <li>Accepted image formats are: JPG, JPEG, PNG.</li>
+        <li>Once the file is selected, click the "Classify Colony" button.</li>
+        <li>The AI will process the image and display the predicted class along with a confidence score.</li>
+    </ul>
+    <p>For best results, ensure your images are in focus and the colony features are distinct.</p>
+</div>
+{% endblock %}
